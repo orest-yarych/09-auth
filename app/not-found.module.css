@@ -1,0 +1,18 @@
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 40px;
+  gap: 20px;
+  align-items: center;
+}
+
+.title {
+  color: grey;
+  text-align: center;
+}
+
+.description {
+  color: grey;
+  text-align: center;
+}
