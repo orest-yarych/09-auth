@@ -1,5 +1,5 @@
 import { create } from 'zustand';
-import { CreateNoteBody } from '../api';
+import { CreateNoteBody } from '../api/clientApi';
 import { persist } from 'zustand/middleware';
 
 const initialDraft: CreateNoteBody = {
