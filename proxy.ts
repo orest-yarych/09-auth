@@ -4,9 +4,10 @@ import { checkSession } from './lib/api/serverApi';
 import { parseSetCookie } from 'cookie';
 
 const privateRoutes = ['/profile', '/notes'];
-const publicRoutes = ['/sign-in', '/sing-up'];
+const publicRoutes = ['/sign-in', '/sign-up'];
 
 export async function proxy(request: NextRequest) {
+  console.log('testtest');
   const { pathname } = request.nextUrl;
   const cookieStore = await cookies();
   const accessToken = cookieStore.get('accessToken')?.value;
@@ -77,5 +78,5 @@ export async function proxy(request: NextRequest) {
 }
 
 export const config = {
-  matcher: ['/profile/:path*', '/notes', '/sing-in', '/sing-up'],
+  matcher: ['/profile/:path*', '/notes/:path*', '/sign-in', '/sign-up'],
 };
