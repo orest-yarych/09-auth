@@ -75,5 +75,5 @@ export async function updateMe(username: string): Promise<User> {
 }
 
 export async function logout(): Promise<void> {
-  await nextServer.post('/auth/logout/');
+  await nextServer.post('/auth/logout');
 }
